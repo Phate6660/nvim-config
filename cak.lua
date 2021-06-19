@@ -2,10 +2,10 @@
 local cmd = vim.cmd  -- To execute Vim commands e.g. cmd('pwd')
 
 -- Commands
--- :Sin2 will set the indentation to 2 and expand tabs to spaces
--- :Sin4 will set the indentation to 4 and expand tabs to spaces
-cmd('command Sin2 execute "set ts=2 sw=2 expandtab"')
-cmd('command Sin4 execute "set ts=4 sw=4 expandtab"')
+-- :Sin2 will set the indentation to 2
+-- :Sin4 will set the indentation to 4
+cmd('command Sin2 execute "set ts=2 sw=2"')
+cmd('command Sin4 execute "set ts=4 sw=4"')
 
 --- Keybindings
 -- \ + F = find and preview files
