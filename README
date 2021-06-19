@@ -29,7 +29,7 @@ Some notable other paq commands are:
 - `:PaqUpdate` -- update packages
 - `:PaqList`   -- list packages
 
-Current plugin list:                                                                                                                                                                                       
+Current package list:
   fennel.vim
   firenvim
   globedit.vim
