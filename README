@@ -12,3 +12,8 @@ Requires:
 - a terminal with truecolor support (I use xterm personally, it also has superb mouse support)
 
 For screenshots, take a look at the `screenshots/` directory.
+
+Installation:
+- `git clone https://github.com/Phate6660/nvim-config`
+- `cp nvim-config/*.lua ~/.config/nvim` (make `~/.config/nvim` if it doesn't exit)
+- edit `~/.config/nvim/init.lua` and change `CONFIG_PATH` to your `~/.config/nvim` directory
