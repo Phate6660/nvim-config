@@ -17,3 +17,37 @@ Installation:
 - `git clone https://github.com/Phate6660/nvim-config`
 - `cp nvim-config/*.lua ~/.config/nvim` (make `~/.config/nvim` if it doesn't exit)
 - edit `~/.config/nvim/init.lua` and change `CONFIG_PATH` to your `~/.config/nvim` directory
+
+Note: The first time you run nvim after copying and editing the configs, 
+you'll get errors about not being able to load Lua files.
+
+This is because I use paq, a pure lua package manager which will handle installing
+packages for you. To fix this, all you need to do is run `:PaqInstall` which automatically
+clone all the repos specified. After that, just close nvim and re-open it.
+
+Some notable other paq commands are:
+- `:PaqUpdate` -- update packages
+- `:PaqList`   -- list packages
+
+Current plugin list:                                                                                                                                                                                       
+  fennel.vim
+  firenvim
+  globedit.vim
+  indent-guides.nvim
+  lualine.nvim
+  mkdir.nvim
+  neon
+  nvim-compe
+  nvim-lspconfig
+  nvim-luapad
+  nvim-treesitter
+  paq-nvim
+  playground
+  plenary.nvim
+  popup.nvim
+  rust.vim
+  syntastic
+  telescope.nvim
+
+If you don't want any of the above packages, simply remove them from `packages.lua`.
+Most of the pacakges are commented in the file with descriptions.
