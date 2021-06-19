@@ -1,7 +1,7 @@
 My nvim configuration, done in pure lua.
 Requires:
 - the latest neovim with treesitter and builtin LSP
-- LSP servers (you'll need to remove the LSP servers you don't want in `packages.lua`):
+- LSP servers (you'll need to remove the LSP servers you don't want in packages.lua):
   + bashls (bash)
   + deno (javascript and typescript)
   + fsautocomplete (fsharp)
@@ -11,23 +11,23 @@ Requires:
   + pyls (python)
 - a terminal with truecolor support (I use xterm personally, it also has superb mouse support)
 
-For screenshots, take a look at the `screenshots/` directory.
+For screenshots, take a look at the screenshots/ directory.
 
 Installation:
-- `git clone https://github.com/Phate6660/nvim-config`
-- `cp nvim-config/*.lua ~/.config/nvim` (make `~/.config/nvim` if it doesn't exit)
-- edit `~/.config/nvim/init.lua` and change `CONFIG_PATH` to your `~/.config/nvim` directory
+- git clone https://github.com/Phate6660/nvim-config
+- cp nvim-config/*.lua ~/.config/nvim (make ~/.config/nvim if it doesn't exit)
+- edit ~/.config/nvim/init.lua and change CONFIG_PATH to your ~/.config/nvim directory
 
 Note: The first time you run nvim after copying and editing the configs, 
 you'll get errors about not being able to load Lua files.
 
 This is because I use paq, a pure lua package manager which will handle installing
-packages for you. To fix this, all you need to do is run `:PaqInstall` which automatically
+packages for you. To fix this, all you need to do is run :PaqInstall which automatically
 clone all the repos specified. After that, just close nvim and re-open it.
 
 Some notable other paq commands are:
-- `:PaqUpdate` -- update packages
-- `:PaqList`   -- list packages
+- :PaqUpdate -- update packages
+- :PaqList   -- list packages
 
 Current package list:
   fennel.vim
@@ -49,5 +49,5 @@ Current package list:
   syntastic
   telescope.nvim
 
-If you don't want any of the above packages, simply remove them from `packages.lua`.
+If you don't want any of the above packages, simply remove them from packages.lua.
 Most of the pacakges are commented in the file with descriptions.
