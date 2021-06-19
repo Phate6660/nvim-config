@@ -4,7 +4,7 @@ local g = vim.g      -- Access to global options (can be non-existant, e.g. a pl
 local o = vim.o      -- Access to global options (has to exist in base nvim)
 
 --- Package Management
-cmd 'packadd paq-nvim'                  -- Load the package manager
+cmd('packadd paq-nvim')                 -- Load the package manager
 local paq = require('paq-nvim').paq     -- A convenient alias
 paq {'savq/paq-nvim', opt = true}       -- paq-nvim manages itself
 paq {'nvim-treesitter/nvim-treesitter'} -- An awesome parser generator
@@ -161,4 +161,3 @@ ts.setup {
         enable = true
     }
 }
-

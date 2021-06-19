@@ -10,22 +10,22 @@ cmd('command Sin4 execute "set ts=4 sw=4"')
 --- Keybindings
 -- \ + F = find and preview files
 vim.api.nvim_set_keymap(
-'n',
-'<leader>f',
-[[<cmd>lua require('telescope.builtin').find_files()<cr>]],
-{
-    noremap = true,
-    silent = true
-}
+    'n',
+    '<leader>f',
+    [[<cmd>lua require('telescope.builtin').find_files()<cr>]],
+    {
+        noremap = true,
+        silent = true
+    }
 )
 
 -- \ + space = find and preview buffers
 vim.api.nvim_set_keymap(
-'n',
-'<leader><space>',
-[[<cmd>lua require('telescope.builtin').buffers()<cr>]],
-{
-    noremap = true,
-    silent = true
-}
+    'n',
+    '<leader><space>',
+    [[<cmd>lua require('telescope.builtin').buffers()<cr>]],
+    {
+        noremap = true,
+        silent = true
+    }
 )
