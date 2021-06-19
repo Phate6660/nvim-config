@@ -1,0 +1,14 @@
+My nvim configuration, done in pure lua.
+Requires:
+- the latest neovim with treesitter and builtin LSP
+- LSP servers (you'll need to remove the LSP servers you don't want in `packages.lua`):
+  + bashls (bash)
+  + deno (javascript and typescript)
+  + fsautocomplete (fsharp)
+  + intelephense (php)
+  + rust_analyzer (rust)
+  + sumneko (lua) -- make sure to change the paths to the correct ones if you use this
+  + pyls (python)
+- a terminal with truecolor support (I use xterm personally, it also has superb mouse support)
+
+For screenshots, take a look at the `screenshots/` directory.
