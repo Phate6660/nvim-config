@@ -49,3 +49,5 @@ cmd('colorscheme neon')
 cmd('autocmd Filetype css setlocal sw=2 ts=2')
 cmd('autocmd Filetype html setlocal sw=2 ts=2')
 cmd('autocmd Filetype xml setlocal sw=2 ts=2')
+-- Set these filetypes to fsharp
+cmd('autocmd BufNewFile,BufRead *.fs,*.fsx,*.fsi set filetype=fsharp')

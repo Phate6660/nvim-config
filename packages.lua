@@ -1,8 +1,7 @@
---- Helpers
-local cmd = vim.cmd  -- To execute Vim commands e.g. cmd('pwd')
+-- Load paq
+vim.cmd('packadd paq-nvim')
 
---- Package Management
-cmd('packadd paq-nvim')                -- load paq
+-- The list of packages, each one is a repo
 require('paq-nvim') {
     'savq/paq-nvim';                   -- paq manages itself
     'nvim-treesitter/nvim-treesitter'; -- An awesome parser generator
@@ -41,7 +40,6 @@ lsp.denols.setup {} -- javascript and typescript
 
 -- fsharp - start
 -- these file extensions default to forth, set to fsharp instead
-cmd('autocmd BufNewFile,BufRead *.fs,*.fsx,*.fsi set filetype=fsharp')
 lsp.fsautocomplete.setup {
     cmd = {'fsautocomplete', '--background-service-enabled'}
 }
