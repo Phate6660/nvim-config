@@ -61,6 +61,6 @@ Most of the packages are commented in the file with descriptions.
 :Sin4 = set indentation to 4
 
 ### Keybindings ###
-\ + f       = manage files starting from current working directory with telescope
-\ + t       = toggle a floating terminal running bash
-\ + <space> = manage buffers with telescope
+\ -> f       = manage files starting from current working directory with telescope
+\ -> t       = toggle a floating terminal running bash
+\ -> <space> = manage buffers with telescope
