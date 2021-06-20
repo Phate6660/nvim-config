@@ -1,5 +1,6 @@
 My nvim configuration, done in pure lua.
 Requires:
+- paq-nvim to be installed -- https://github.com/savq/paq-nvim
 - the latest neovim with treesitter and builtin LSP
 - LSP servers (you'll need to remove the LSP servers you don't want in packages.lua):
   + bashls (bash)

@@ -4,26 +4,27 @@ local g = vim.g      -- Access to global options (can be non-existant, e.g. a pl
 local o = vim.o      -- Access to global options (has to exist in base nvim)
 
 --- Package Management
-cmd('packadd paq-nvim')                 -- Load the package manager
-local paq = require('paq-nvim').paq     -- A convenient alias
-paq {'savq/paq-nvim', opt = true}       -- paq-nvim manages itself
-paq {'nvim-treesitter/nvim-treesitter'} -- An awesome parser generator
-paq {'nvim-treesitter/playground'}      -- Use this if you don't understand what treesitter does
-paq {'neovim/nvim-lspconfig'}           -- Setup builtin lsp in latest nvim
-paq {'hrsh7th/nvim-compe'}              -- Completion
-paq {'nvim-lua/plenary.nvim'}
-paq {'nvim-lua/popup.nvim'}
-paq {'nvim-telescope/telescope.nvim'}
-paq {'vim-syntastic/syntastic'}         -- Syntax checking
-paq {'rust-lang/rust.vim'}              -- Rust support
-paq {'glepnir/indent-guides.nvim'}      -- Indentation guides
-paq {'rafcamlet/nvim-luapad'}           -- Lua stuff
-paq {'bakpakin/fennel.vim'}             -- Fennel support
-paq {'glacambre/firenvim'}              -- nvim in firefox
-paq {'arp242/globedit.vim'}             -- Better commands for edit, tabedit, etc, that accepts globs
-paq {'rafamadriz/neon'}                 -- Colorscheme made specifically for treesitter and lsp
-paq {'hoob3rt/lualine.nvim'}            -- A fast statusline
-paq {'jghauser/mkdir.nvim'}             -- Automatically make parent directories if non-existant when saving files
+cmd('packadd paq-nvim')                -- load paq
+require('paq-nvim') {
+    'savq/paq-nvim';                   -- paq manages itself
+    'nvim-treesitter/nvim-treesitter'; -- An awesome parser generator
+    'nvim-treesitter/playground';      -- Use this if you don't understand what treesitter does
+    'neovim/nvim-lspconfig';           -- Setup builtin lsp in latest nvim
+    'hrsh7th/nvim-compe';              -- Completion
+    'nvim-lua/plenary.nvim';
+    'nvim-lua/popup.nvim';
+    'nvim-telescope/telescope.nvim';
+    'vim-syntastic/syntastic';         -- Syntax checking
+    'rust-lang/rust.vim';              -- Rust support
+    'glepnir/indent-guides.nvim';      -- Indentation guides
+    'rafcamlet/nvim-luapad';           -- Lua stuff
+    'bakpakin/fennel.vim';             -- Fennel support
+    'glacambre/firenvim';              -- nvim in firefox
+    'arp242/globedit.vim';             -- Better commands for edit, tabedit, etc, that accepts globs
+    'rafamadriz/neon';                 -- Colorscheme made specifically for treesitter and lsp
+    'hoob3rt/lualine.nvim';            -- A fast statusline
+    'jghauser/mkdir.nvim';             -- Automatically make parent directories if non-existant when saving files
+}
 
 --- indent-guides
 require 'indent_guides'.setup {}
@@ -161,3 +162,4 @@ ts.setup {
         enable = true
     }
 }
+
