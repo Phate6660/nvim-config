@@ -1,7 +1,5 @@
 --- Helpers
 local cmd = vim.cmd  -- To execute Vim commands e.g. cmd('pwd')
-local g = vim.g      -- Access to global options (can be non-existant, e.g. a plugin's settings)
-local o = vim.o      -- Access to global options (has to exist in base nvim)
 
 --- Package Management
 cmd('packadd paq-nvim')                -- load paq
@@ -88,8 +86,7 @@ lsp.sumneko_lua.setup {
 lsp.pyls.setup {} -- python
 
 --- lualine
-local lualine = require 'lualine'
-lualine.setup {
+require 'lualine'.setup {
     options = {
         icons_enabled = false,
         theme = 'neon',
@@ -122,9 +119,7 @@ lualine.setup {
 require 'mkdir'
 
 --- nvim-compe
-local compe = require 'compe'
-o.completeopt = 'menuone,noselect'
-compe.setup {
+require 'compe'.setup {
     enabled = true;
     autocomplete = true; -- Note: this does NOT mean auto-complete, it means tab-complete
     debug = false;
@@ -148,22 +143,11 @@ compe.setup {
     };
 }
 
---- nvim-luapad
-cmd('command Lev execute "lua require \'luapad/run\'.run()"')
-
---- Syntastic
-g.syntastic_always_populate_loc_list = 1
-g.syntastic_auto_loc_list = 1
-g.syntastic_check_on_open = 1
-g.syntastic_check_on_wq = 0
-
 --- Telescope
-local telescope = require 'telescope'
-telescope.setup {}
+require 'telescope'.setup {}
 
 --- Treesitter
-local ts = require 'nvim-treesitter.configs'
-ts.setup {
+require 'nvim-treesitter.configs'.setup {
     ensure_installed = 'maintained',
     highlight = {
         enable = true

@@ -57,6 +57,7 @@ If you don't want any of the above packages, simply remove them from packages.lu
 Most of the packages are commented in the file with descriptions.
 
 ### Commands ###
+:Lev  = evaluate Lua code in the current buffer
 :Sin2 = set indentation to 2
 :Sin4 = set indentation to 4
 

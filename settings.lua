@@ -17,6 +17,13 @@ b.smartindent = true
 b.tabstop = indent
 -- Use the dark variant of the neon colorscheme
 g.neon_style = "doom" -- Supported options: 'normal', 'doom', 'dark', 'light'
+-- Syntastic options
+g.syntastic_always_populate_loc_list = 1
+g.syntastic_auto_loc_list = 1
+g.syntastic_check_on_open = 1
+g.syntastic_check_on_wq = 0
+-- Completion options required for compe
+o.completeopt = 'menuone,noselect'
 -- Enable mouse support
 o.mouse = 'a'
 -- Put new windows below current

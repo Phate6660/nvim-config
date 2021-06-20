@@ -3,8 +3,10 @@ local cmd = vim.cmd  -- To execute Vim commands e.g. cmd('pwd')
 local set_keymap = vim.api.nvim_set_keymap -- To set keybindings
 
 -- Commands
+-- :Lev will evaluate Lua code in the current buffer
 -- :Sin2 will set the indentation to 2
 -- :Sin4 will set the indentation to 4
+cmd('command Lev execute "lua require \'luapad/run\'.run()"')
 cmd('command Sin2 execute "set ts=2 sw=2"')
 cmd('command Sin4 execute "set ts=4 sw=4"')
 
