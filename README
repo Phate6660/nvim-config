@@ -55,7 +55,7 @@ Current package list:
   telescope.nvim
 
 If you don't want any of the above packages, simply remove them from packages.lua.
-Most of the pacakges are commented in the file with descriptions.
+Most of the packages are commented in the file with descriptions.
 
 ### Commands ###
 :Sin2 = set indentation to 2
