@@ -1,5 +1,6 @@
 --- Helpers
 local cmd = vim.cmd  -- To execute Vim commands e.g. cmd('pwd')
+local set_keymap = vim.api.nvim_set_keymap -- To set keybindings
 
 -- Commands
 -- :Sin2 will set the indentation to 2
@@ -8,8 +9,20 @@ cmd('command Sin2 execute "set ts=2 sw=2"')
 cmd('command Sin4 execute "set ts=4 sw=4"')
 
 --- Keybindings
+-- Anatomy of setting the keymap:
+-- set_keymap(
+--     'n',                          -- the mode goes here
+--     '<leader>f',                  -- the keybinding goes here
+--     [[<cmd>lua print('hi')<cr>]], -- what is done goes here
+--     -- Options go below here inside curley brackets, such as:
+--     {
+--         noremap = true,
+--         silent = true
+--     }
+-- )
+
 -- \ + F = find and preview files
-vim.api.nvim_set_keymap(
+set_keymap(
     'n',
     '<leader>f',
     [[<cmd>lua require('telescope.builtin').find_files()<cr>]],
@@ -20,8 +33,8 @@ vim.api.nvim_set_keymap(
 )
 
 -- \ + T = toggle a floating terminal
-vim.api.nvim_set_keymap(
-    'n', -- normal mode
+set_keymap(
+    'n',
     '<leader>t',
     [[<cmd>lua require('FTerm').toggle()<cr>]],
     {
@@ -30,8 +43,8 @@ vim.api.nvim_set_keymap(
     }
 )
 
-vim.api.nvim_set_keymap(
-    't', -- terminal mode
+set_keymap(
+    't',
     '<leader>t',
     [[<cmd>lua require('FTerm').toggle()<cr>]],
     {
@@ -41,7 +54,7 @@ vim.api.nvim_set_keymap(
 )
 
 -- \ + space = find and preview buffers
-vim.api.nvim_set_keymap(
+set_keymap(
     'n',
     '<leader><space>',
     [[<cmd>lua require('telescope.builtin').buffers()<cr>]],
