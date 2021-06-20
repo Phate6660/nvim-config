@@ -24,7 +24,6 @@ Note: The first time you run nvim after copying and editing the configs,
 you'll get errors about not being able to load Lua files.
 
 ### The Package Manager ###
-
 This is because I use paq, a pure lua package manager which will handle installing
 packages for you. To fix this, all you need to do is run :PaqInstall which automatically
 clone all the repos specified. After that, just close nvim and re-open it.
