@@ -33,6 +33,7 @@ Some notable other paq commands are:
 - :PaqList   -- list packages
 
 Current package list:
+  FTerm.nvim
   fennel.vim
   firenvim
   globedit.vim
