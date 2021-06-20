@@ -24,7 +24,8 @@ require('paq-nvim') {
     'rafamadriz/neon';                 -- Colorscheme made specifically for treesitter and lsp
     'hoob3rt/lualine.nvim';            -- A fast statusline
     'jghauser/mkdir.nvim';             -- Automatically make parent directories if non-existant when saving files
-    'numtostr/FTerm.nvim';              -- Awesome floating terminal for nvim
+    'numtostr/FTerm.nvim';             -- Awesome floating terminal for nvim
+    'ahmedkhalf/lsp-rooter.nvim'       -- Automagically change the current working directory to the root of the project via lsp
 }
 
 --- FTerm
@@ -85,7 +86,11 @@ lsp.sumneko_lua.setup {
 }
 -- lua - end
 
-lsp.pyls.setup{} -- python
+lsp.pyls.setup {} -- python
+
+--- lsp-rooter
+local rooter = require 'lsp-rooter'
+rooter.setup {}
 
 --- lualine
 local lualine = require 'lualine'

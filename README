@@ -38,6 +38,7 @@ Current package list:
   firenvim
   globedit.vim
   indent-guides.nvim
+  lsp-rooter.nvim
   lualine.nvim
   mkdir.nvim
   neon
