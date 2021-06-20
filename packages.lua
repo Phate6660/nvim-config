@@ -48,7 +48,7 @@ lsp.rust_analyzer.setup {} -- rust
 local sumneko_root_path = '/home/valley/downloads/git/lua-language-server'
 local sumneko_binary = sumneko_root_path.."/bin/Linux/lua-language-server"
 
-require'lspconfig'.sumneko_lua.setup {
+lsp.sumneko_lua.setup {
     cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
     settings = {
         Lua = {
