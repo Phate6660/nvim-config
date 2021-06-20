@@ -11,7 +11,10 @@ cmd('command Sin4 execute "set ts=4 sw=4"')
 --- Keybindings
 -- Anatomy of setting the keymap:
 -- set_keymap(
---     'n',                          -- the mode goes here
+--     'n',                          -- the mode goes here, available options are:
+--                                      'c' (command-line), 'i' (insert), 'n' (normal),
+--                                      'o', (operator pending), 's' (select), 't' (terminal),
+--                                      'v' (visual and select), 'x' (visual)
 --     '<leader>f',                  -- the keybinding goes here
 --     [[<cmd>lua print('hi')<cr>]], -- what is done goes here
 --     -- Options go below here inside curley brackets, such as:
