@@ -1,5 +1,8 @@
+### Description ###
 My nvim configuration, done in pure lua.
-Requires:
+For screenshots, take a look at the screenshots/ directory.
+
+### Requires ###
 - paq-nvim to be installed -- https://github.com/savq/paq-nvim
 - the latest neovim with treesitter and builtin LSP
 - LSP servers (you'll need to remove the LSP servers you don't want in packages.lua):
@@ -12,15 +15,15 @@ Requires:
   + pyls (python)
 - a terminal with truecolor support (I use xterm personally, it also has superb mouse support)
 
-For screenshots, take a look at the screenshots/ directory.
-
-Installation:
+### Installation ###
 - git clone https://github.com/Phate6660/nvim-config
 - cp nvim-config/*.lua ~/.config/nvim (make ~/.config/nvim if it doesn't exit)
 - edit ~/.config/nvim/init.lua and change CONFIG_PATH to your ~/.config/nvim directory
 
 Note: The first time you run nvim after copying and editing the configs, 
 you'll get errors about not being able to load Lua files.
+
+### The Package Manager ###
 
 This is because I use paq, a pure lua package manager which will handle installing
 packages for you. To fix this, all you need to do is run :PaqInstall which automatically
@@ -52,3 +55,8 @@ Current package list:
 
 If you don't want any of the above packages, simply remove them from packages.lua.
 Most of the pacakges are commented in the file with descriptions.
+
+### Keybindings ###
+\ + f       = manage files starting from current working directory with telescope
+\ + t       = toggle a floating terminal running bash
+\ + <space> = manage buffers with telescope

@@ -19,6 +19,27 @@ vim.api.nvim_set_keymap(
     }
 )
 
+-- \ + T = toggle a floating terminal
+vim.api.nvim_set_keymap(
+    'n', -- normal mode
+    '<leader>t',
+    [[<cmd>lua require('FTerm').toggle()<cr>]],
+    {
+        noremap = true,
+        silent = true
+    }
+)
+
+vim.api.nvim_set_keymap(
+    't', -- terminal mode
+    '<leader>t',
+    [[<cmd>lua require('FTerm').toggle()<cr>]],
+    {
+        noremap = true,
+        silent = true
+    }
+)
+
 -- \ + space = find and preview buffers
 vim.api.nvim_set_keymap(
     'n',

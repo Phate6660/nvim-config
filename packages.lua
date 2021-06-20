@@ -24,7 +24,14 @@ require('paq-nvim') {
     'rafamadriz/neon';                 -- Colorscheme made specifically for treesitter and lsp
     'hoob3rt/lualine.nvim';            -- A fast statusline
     'jghauser/mkdir.nvim';             -- Automatically make parent directories if non-existant when saving files
+    'numtostr/FTerm.nvim';              -- Awesome floating terminal for nvim
 }
+
+--- FTerm
+require 'FTerm'.setup({
+    cmd = 'bash', -- the best shell, fight me ^_^
+    border = 'double'
+})
 
 --- indent-guides
 require 'indent_guides'.setup {}
@@ -50,7 +57,7 @@ local sumneko_root_path = '/home/valley/downloads/git/lua-language-server'
 local sumneko_binary = sumneko_root_path.."/bin/Linux/lua-language-server"
 
 lsp.sumneko_lua.setup {
-    cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
+    cmd = {sumneko_binary, '-E', sumneko_root_path .. '/main.lua'};
     settings = {
         Lua = {
             runtime = {
