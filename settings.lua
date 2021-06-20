@@ -16,7 +16,7 @@ b.smartindent = true
 -- Tabs = 4 spaces
 b.tabstop = indent
 -- Use the dark variant of the neon colorscheme
-g.neon_style = "dark" -- Supported options: 'normal', 'doom', 'dark', 'light'
+g.neon_style = "doom" -- Supported options: 'normal', 'doom', 'dark', 'light'
 -- Enable mouse support
 o.mouse = 'a'
 -- Put new windows below current
