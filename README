@@ -10,7 +10,7 @@ For screenshots, take a look at the screenshots/ directory.
   + deno (javascript and typescript)
   + fsautocomplete (fsharp)
   + intelephense (php)
-  + rust_analyzer (rust)
+  + rls (rust)
   + sumneko (lua) -- make sure to change the paths to the correct ones if you use this
   + pyls (python)
 - a terminal with truecolor support (I use xterm personally, it also has superb mouse support)
@@ -50,8 +50,9 @@ Current package list:
   plenary.nvim
   popup.nvim
   rust.vim
-  syntastic
+  syntastic -- note that I explicitely enabled the Racket checker, remove the line if not needed
   telescope.nvim
+  vim-racket
 
 If you don't want any of the above packages, simply remove them from packages.lua.
 Most of the packages are commented in the file with descriptions.
@@ -65,3 +66,6 @@ Most of the packages are commented in the file with descriptions.
 \ -> f       = manage files starting from current working directory with telescope
 \ -> t       = toggle a floating terminal running bash
 \ -> <space> = manage buffers with telescope
+C-a          = goto beginning of line
+C-e          = goto end of line
+C-w          = delete text until next word
