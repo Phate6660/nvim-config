@@ -31,6 +31,7 @@ G.syntastic_always_populate_loc_list = 1
 G.syntastic_auto_loc_list = 1
 G.syntastic_check_on_open = 1
 G.syntastic_check_on_wq = 0
+G.syntastic_enable_racket_racket_checker = 1
 -- Color the 100th column of text
 o.colorcolumn = tostring(width)
 -- Highlight the current line the cursor is on

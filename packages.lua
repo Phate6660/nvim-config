@@ -22,6 +22,7 @@ require('paq-nvim') {
     'hoob3rt/lualine.nvim';            -- A fast statusline
     'jghauser/mkdir.nvim';             -- Automatically make parent directories if non-existant when saving files
     'numtostr/FTerm.nvim';             -- Awesome floating terminal for nvim
+    'wlangstroth/vim-racket';          -- Racket stuff
 }
 
 --- FTerm
@@ -46,7 +47,7 @@ lsp.fsautocomplete.setup {
 -- fsharp - end
 
 lsp.intelephense.setup {} -- php
-lsp.rust_analyzer.setup {} -- rust
+lsp.rls.setup {} -- rust
 
 -- lua - start
 local sumneko_root_path = '/home/valley/downloads/git/lua-language-server'

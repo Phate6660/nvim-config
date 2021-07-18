@@ -68,3 +68,65 @@ set_keymap(
         silent = true
     }
 )
+
+--- Emacs keybindings
+-- CTRL+a = goto beginning of line
+set_keymap(
+    'n',
+    '<C-a>',
+    '<Home>',
+    {
+        noremap = true,
+        silent = true
+    }
+)
+
+set_keymap(
+    'i',
+    '<C-a>',
+    '<Home>',
+    {
+        noremap = true,
+        silent = true
+    }
+)
+-- CTRL+e = goto end of line
+set_keymap(
+    'n',
+    '<C-e>',
+    '<End>',
+    {
+        noremap = true,
+        silent = true
+    }
+)
+
+set_keymap(
+    'i',
+    '<C-e>',
+    '<End>',
+    {
+        noremap = true,
+        silent = true
+    }
+)
+-- CTRL+w = remove text up to next word
+set_keymap(
+    'n',
+    '<C-w>',
+    'dw',
+    {
+        noremap = true,
+        silent = true
+    }
+)
+
+set_keymap(
+    'i',
+    '<C-w>',
+    'dw',
+    {
+        noremap = true,
+        silent = true
+    }
+)
