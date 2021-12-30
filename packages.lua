@@ -2,7 +2,7 @@
 vim.cmd('packadd paq-nvim')
 
 -- The list of packages, each one is a repo
-require('paq-nvim') {
+require('paq') {
     'savq/paq-nvim';                   -- paq manages itself
     'nvim-treesitter/nvim-treesitter'; -- An awesome parser generator
     'nvim-treesitter/playground';      -- Use this if you don't understand what treesitter does
@@ -22,7 +22,10 @@ require('paq-nvim') {
     'hoob3rt/lualine.nvim';            -- A fast statusline
     'jghauser/mkdir.nvim';             -- Automatically make parent directories if non-existant when saving files
     'numtostr/FTerm.nvim';             -- Awesome floating terminal for nvim
+    'github/copilot.vim';	           -- GitHub Copilot
+    'jbyuki/instant.nvim';             -- Collaborative editing
     'wlangstroth/vim-racket';          -- Racket stuff
+    'tpope/vim-eunuch';                -- Filesystem unix stuff (write-with sudo, chmod, etc) integration
 }
 
 --- FTerm
@@ -36,53 +39,55 @@ require 'indent_guides'.setup {}
 
 --- LSP
 local lsp = require 'lspconfig'
-lsp.bashls.setup {} -- bash
-lsp.denols.setup {} -- javascript and typescript
+--lsp.bashls.setup {} -- bash
+--lsp.denols.setup {} -- javascript and typescript
 
 -- fsharp - start
 -- these file extensions default to forth, set to fsharp instead
-lsp.fsautocomplete.setup {
-    cmd = {'fsautocomplete', '--background-service-enabled'}
-}
+--lsp.fsautocomplete.setup {
+--    cmd = {'fsautocomplete', '--background-service-enabled'}
+--}
 -- fsharp - end
 
-lsp.intelephense.setup {} -- php
-lsp.rls.setup {} -- rust
+--lsp.intelephense.setup {} -- php
+lsp.racket_langserver.setup {} -- racket
+lsp.rust_analyzer.setup {} -- rust
+lsp.solargraph.setup {} -- ruby
 
 -- lua - start
-local sumneko_root_path = '/home/valley/downloads/git/lua-language-server'
-local sumneko_binary = sumneko_root_path.."/bin/Linux/lua-language-server"
+--local sumneko_root_path = '/home/valley/downloads/git/lua-language-server'
+--local sumneko_binary = sumneko_root_path.."/bin/Linux/lua-language-server"
 
-lsp.sumneko_lua.setup {
-    cmd = {sumneko_binary, '-E', sumneko_root_path .. '/main.lua'};
-    settings = {
-        Lua = {
-            runtime = {
-                version = 'LuaJIT',
-                -- Setup your lua path
-                path = vim.split(package.path, ';'),
-            },
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = {'vim'},
-            },
-            workspace = {
-                -- Make the server aware of Neovim runtime files
-                library = {
-                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
-                    [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
-                },
-            },
-            -- Do not send telemetry data containing a randomized but unique identifier
-            telemetry = {
-                enable = false,
-            },
-        },
-    },
-}
+--lsp.sumneko_lua.setup {
+--    cmd = {sumneko_binary, '-E', sumneko_root_path .. '/main.lua'};
+--    settings = {
+--        Lua = {
+--            runtime = {
+--                version = 'LuaJIT',
+--                -- Setup your lua path
+--                path = vim.split(package.path, ';'),
+--            },
+--            diagnostics = {
+--                -- Get the language server to recognize the `vim` global
+--                globals = {'vim'},
+--            },
+--            workspace = {
+--                -- Make the server aware of Neovim runtime files
+--                library = {
+--                    [vim.fn.expand('$VIMRUNTIME/lua')] = true,
+--                    [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
+--                },
+--            },
+--            -- Do not send telemetry data containing a randomized but unique identifier
+--            telemetry = {
+--                enable = false,
+--            },
+--        },
+--    },
+--}
 -- lua - end
 
-lsp.pyls.setup {} -- python
+--lsp.pyls.setup {} -- python
 
 --- lualine
 require 'lualine'.setup {

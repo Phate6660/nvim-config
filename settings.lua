@@ -16,6 +16,7 @@ o.smartindent = true
 o.tabstop = indent
 -- Completion options required for compe
 g.completeopt = 'menuone,noselect'
+g.guifont = "Envy Code R"
 -- Enable mouse support
 g.mouse = 'a'
 -- Put new windows below current
@@ -24,8 +25,11 @@ g.splitbelow = true
 g.splitright = true
 -- Enable truecolor suppor
 g.termguicolors = true
+-- Username for collaborative editing
+G.instant_username = "Phate6660"
 -- Use the dark variant of the neon colorscheme
 G.neon_style = "doom" -- Supported options: 'normal', 'doom', 'dark', 'light'
+G.neon_transparent = true
 -- Syntastic options
 G.syntastic_always_populate_loc_list = 1
 G.syntastic_auto_loc_list = 1
